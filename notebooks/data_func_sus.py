@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import date
 
 
-def correcao_monetaria_ipca(valor_passado, data_passada, data_correcao):
+def correcao_monetaria_ipca(valor_passado, ipca, data_passada, data_correcao):
   '''
   -------------------------------------------------------------------------
   Name: correcao monetaria
