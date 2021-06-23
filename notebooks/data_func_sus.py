@@ -25,3 +25,12 @@ def correcao_monetaria_ipca(valor_passado, ipca, data_passada, data_correcao):
   i_atual = ipca.loc[data_correcao][0]
 
   return  round(valor_passado * (i_atual/i_passado), 2)
+
+
+def formata_uf_regiao_sus(df):
+  regions = {"1":"Norte","2":'Nordeste',"3":'Sudeste',"4":'Sul',"5":'Centro-oeste'}
+  df = df.rename(columns={"Unidade da Federação": "UF"})
+  df.insert(0, 'regiao',  df.index.str.slice(0,1) ) 
+  df.index = df.index.str.slice(3,)
+  df = df.replace({"regiao" : regions})
+  return df
