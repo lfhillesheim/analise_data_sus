@@ -12,11 +12,12 @@ def correcao_monetaria_ipca(valor_passado, ipca, data_passada, data_correcao):
   -------------------------------------------------------------------------
   Parâmetros:
   @param valor_passado: valor na data passa
+  @param ipca: tabela ipca
   @param data_passada : data passada  ano/mes
   @param data_correcao: data correcao ano/mes
   -------------------------------------------------------------------------
   Exemplo
-  valor_pelo_ipca = correcao_monetaria(100, "2008/JAN", "2020/DEZ")
+  valor_pelo_ipca = correcao_monetaria(100, ipca, "2008/JAN", "2020/DEZ")
   '''
 
 
