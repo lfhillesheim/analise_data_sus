@@ -20,7 +20,7 @@ def correcao_monetaria_ipca(valor_passado, ipca, data_passada, data_correcao):
   valor_pelo_ipca = correcao_monetaria(100, ipca, "2008/JAN", "2020/DEZ")
   '''
   
-
+  
   i_passado = ipca.loc[data_passada][0]
   i_atual = ipca.loc[data_correcao][0]
 
@@ -58,5 +58,6 @@ def para_data(ano_mes: str):
   ano: int = int(ano_mes[:4])
   mes: str = ano_mes[5:]
   mes_numero: int = meses[mes]
-    
-  return date(ano, mes_numero, 1)
+  
+  data = date(ano, mes_numero, 1).astype('datetime64)
+  return data
