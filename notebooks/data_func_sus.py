@@ -61,5 +61,5 @@ def para_data(ano_mes: str):
   
   data = date(ano, mes_numero, 1)
   
-  data = data.astype('datetime64)
+  data = data.astype('datetime64')
   return data
